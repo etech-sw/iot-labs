@@ -1,5 +1,9 @@
+#! /usr/bin/env python
+
+# Sample Demo program to interface with the DHT11
+# Created by Etech-SW
+
 import adafruit_dht
-import time
 import board
 import time
 
@@ -15,11 +19,10 @@ try:
             			"Temp: {:.1f} F / {:.1f} C    Humidity: {}% ".format(
                 		temp_f, temp_c, humidity
             			)
-        		)		
+        		)
 			time.sleep(2.0)
 		except RuntimeError as error:
 			print(error.args[0])
-			
 			time.sleep(2.0)
 			continue
 		except Exception as error:
